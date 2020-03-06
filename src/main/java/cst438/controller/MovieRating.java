@@ -30,12 +30,12 @@ public class MovieRating
    @PostMapping("/movies/new")
    public String processMovieForm(@Valid Movie movie, BindingResult result, 
          Model model) {
-      if (result.hasErrors()) {
-         return "movie_form";
-      }
+//      if (result.hasErrors()) {
+//         return "movie_form";
+//      }
       movie.setTimeStamp(new java.util.Date().toString());
       movieRepository.save(movie);
-      model.addAttribute("movies", movie);
+      model.addAttribute("movie", movie);
       return "movie_show";
    }
    

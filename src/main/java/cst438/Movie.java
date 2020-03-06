@@ -28,7 +28,6 @@ public class Movie
    private String reviewer;
    
    @NotNull
-   @Size(min=3, max=25)
    private String timeStamp;
    
    /*
@@ -44,12 +43,13 @@ public class Movie
    /*
     * Constructor method for the Movie.
     */
-   public Movie(long id, String title, String rating, String reviewer, String timeStamp) {
-      super();
+   public Movie(long id, String title, String rating, String reviewer) {
+      //super();
       this.id = id;
       this.title = title;
       this.reviewer = reviewer;
       this.rating = rating;
+      this.timeStamp = null;
    }
    
    /*
