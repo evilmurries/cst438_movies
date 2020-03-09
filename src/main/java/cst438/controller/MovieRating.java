@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.data.domain.Sort;
 
 import javax.validation.Valid;
 
@@ -33,12 +32,6 @@ public class MovieRating
       if (result.hasErrors()) {
          return "movie_form";
       }
-      //TODO Fix rating validation.
-//      String rating = movie.getRating();
-//      if (rating != "1" || rating != "2" || rating != "3" || 
-//            rating != "4" || rating != "5") {
-//         return "movie_form";
-//      }
       movie.setTimeStamp(new java.util.Date().toString());
       movieRepository.save(movie);
       model.addAttribute("movie", movie);

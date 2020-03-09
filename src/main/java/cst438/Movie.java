@@ -82,14 +82,14 @@ public class Movie
    }
    
    /*
-    * This method returns the integer rating for the Movie.
+    * This method returns the string rating for the Movie.
     */
    public String getRating() {
       return this.rating;
    }
    
    /*
-    * This method receives an integer rating and sets it for
+    * This method receives an string rating and sets it for
     * the Movie.
     */
    public void setRating(String newRating) {
